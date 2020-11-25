@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\CSS\Giveaway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+    <title>Giveaway</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="../Images/logo.png" alt="logo" class="logo">
+            <nav>
+                <a href="#" class="hide-desktop">
+                    <i class="fa fa-bars" id="menu"></i>
+                </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                    <li id="exit" class="exit-btn hide-desktop">
+                        <img src="../Images/x.png" alt="" srcset="">
+                    </li>
+                    <li><a href="Index.php">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="Giveaway.html">Giveaway</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <h1>The monthly Route66 Giveaway</h1>
+            <p class="subhead">Try your chances at winning a crazy price!! a paid trip to spain, where you get to stay at a 4-star hotel with catering paid!! </p>
+            <p class="subhead">You will need to answer a quastion, which changes montly, and then you will need to fill out a form to enter.</p>
+        </section>
+        <div class="giveaway-container">
+            <form action="Giveaway.php" method="POST">
+                <ul>
+                    <label for="">Email</label>
+                    <input type="text" name="email">
+                    <label for="">First Name</label>
+                    <input type="text" name="fname">
+                    <label for="">Last Name</label>
+                    <input type="text" name='lname'>
+                    <button type="submit">Submit</button>
+                    <h2>When was the route built ?</h2>
+                    <input type="radio" name="answer" id="correct" value="1926">
+                    <label for="correct">1926</label>
+                    <input type="radio" name="answer" id="false" value="1925">
+                    <label for="false">1923</label>
+                    <input type="radio" name="answer" id="false" value="1920">
+                    <label for="false">1925</label>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+                <img src="../Images/logo.png" alt="logo" class="logo">
+                <p>Welcome to the end of the Route <br> We hope you enjoyed the journey</p>
+            </div>
+        </div>
+    </footer>
+    <script src="Index.js"></script>
+</body>
+</html>
