@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+.exit-btn img{
+    height: 10px;
+    width: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}

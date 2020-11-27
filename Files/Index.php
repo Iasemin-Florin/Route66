@@ -8,28 +8,30 @@
     <title>Main Page</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <img src="../Images/logo.png" alt="logo" class="logo">
-            <nav>
-                <a href="#" class="hide-desktop">
-                    <i class="fa fa-bars" id="menu"></i>
-                </a>
-                <ul class="show-desktop hide-mobile" id="nav">
-                    <li id="exit" class="exit-btn hide-desktop">
-                        <img src="../Images/x.png" alt="" srcset="">
-                    </li>
-                    <li><a href="Index.html">Home</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="Giveaway.html">Giveaway</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section>
-            <img src="../Images/Route66Drink.png" alt="Energy drink" class="energy-drink">
-            <h1>Brand new Energy Drink to quench your thirst </h1>
-            <p class="subhead">Perfect for a long ride along route 66</p>
-        </section>
+    <div class="main-container">
+        <div class="container">
+            <header>
+                <img src="../Images/logo.png" alt="logo" class="logo">
+                <nav>
+                    <a href="#" class="hide-desktop">
+                        <i class="fa fa-bars" id="menu"></i>
+                    </a>
+                    <ul class="show-desktop hide-mobile" id="nav">
+                        <li id="exit" class="exit-btn hide-desktop">
+                            <img src="../Images/x.png" alt="" srcset="">
+                        </li>
+                        <li><a href="Index.html">Home</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="Giveaway.html">Giveaway</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <img src="../Images/Route66Drink.png" alt="Energy drink" class="energy-drink">
+                <h1>Brand new Energy Drink to quench your thirst </h1>
+                <p class="subhead">Perfect for a long ride along route 66</p>
+            </section>
+        </div>
     </div>
     <div class="brown-container">
         <div class="container">

@@ -6,6 +6,15 @@
     $email = $_POST['email'];
     $answer = $_POST['answer'];
     
+
+    //$to = $_POST['email'];
+    $to = $_POST['email'];
+    $subject = 'Giveaway competition';
+    $message = "Hello " .$fname." " .$lname." you have succesfully entered the giveaway, you have entered for the month of november, the winner will be announced in the last day of the month";
+    $headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+    
     function test_input($data) {
         $data = trim($data);
         $data = stripslashes($data);
@@ -95,15 +104,17 @@
         else 
         {
             //NOTE TIL IMORGEN, TJEK HVILKET ID DEN HAR, HVIS DEN HAR DEN RIGTIGT ID SÅ SKAL DEN RETURN TRUE, HVIS DEN HAR FALSE ID SÅ SKAL DEN RETURN FALSE I DATABASEN
-            if () {
-                
-            }
+            
             $answer = test_input($_POST['answer']);
         }
 
         $sql = "INSERT INTO `userdata` (`firstName`, `lastName`, `mail`, `entered`, `answer`) 
         VALUES ('$fname', '$lname', '$email', '$currentTime', '$answer');";
         mysqli_query($conn, $sql);
-        echo " error: ".mysqli_error($conn);
+        //echo " error: ".mysqli_error($conn);
+
+        mail($to, $subject, $message, $headers);
     }
 ?>
+
+<script type=""></script>
