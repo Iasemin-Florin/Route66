@@ -1,5 +1,5 @@
 <?php 
-    include 'dbconnect.php';
+    include '../inc/dbconnect.php';
     
     $sql = "SELECT * FROM `userdata`";
     $response = mysqli_query($conn, $sql);
@@ -48,33 +48,35 @@
         </header>
     </div>
     <div class="brown-container">
-        <table>
-            <tr>
-                <th>ID:</th>
-                <th>First name:</th>
-                <th>Last name:</th>
-                <th>Email:</th>
-                <th>Entered:</th>
-                <th>Answer:</th>
-            </tr>
-            <tr>
-                <?php 
-                     foreach($data as $user)
-                     {
-                         echo "
-                            <tr>
-                                <td>".$user['userID']."</td>
-                                <td>".$user['firstName']."</td>
-                                <td>".$user['lastName']."</td>
-                                <td>".$user['mail']."</td>
-                                <td>".strtotime($user['entered'])."</td>
-                                <td>".$user['answer']."</td>
-                                <br>
-                            </tr>";
-                     }
-                ?>
-            </tr>
-        </table>
+        <div>
+            <table>
+                <tr>
+                    <th>ID:</th>
+                    <th>First name:</th>
+                    <th>Last name:</th>
+                    <th>Email:</th>
+                    <th>Entered:</th>
+                    <th>Answer:</th>
+                </tr>
+                <tr>
+                    <?php 
+                        foreach($data as $user)
+                        {
+                            echo "
+                                <tr>
+                                    <td>".$user['userID']."</td>
+                                    <td>".$user['firstName']."</td>
+                                    <td>".$user['lastName']."</td>
+                                    <td>".$user['mail']."</td>
+                                    <td>".strtotime($user['entered'])."</td>
+                                    <td>".$user['answer']."</td>
+                                    <br>
+                                </tr>";
+                        }
+                    ?>
+                </tr>
+            </table>
+        </div>
     </div>
     <script src="Modal.js"></script>
     <script src="Index.js"></script>

@@ -102,9 +102,7 @@
             return;
         }
         else 
-        {
-            //NOTE TIL IMORGEN, TJEK HVILKET ID DEN HAR, HVIS DEN HAR DEN RIGTIGT ID SÅ SKAL DEN RETURN TRUE, HVIS DEN HAR FALSE ID SÅ SKAL DEN RETURN FALSE I DATABASEN
-            
+        {            
             $answer = test_input($_POST['answer']);
         }
 
