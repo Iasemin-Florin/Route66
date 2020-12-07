@@ -42,7 +42,7 @@
                     </li>
                     <li><a href="http://localhost/Route99/Files/Index.php">Home</a></li>
                     <li><a href="http://localhost/Route99/Files/Giveaway.html">Giveaway</a></li>
-                    <li><a href="http://localhost/Route99/Files/Questions.html">Questions</a></li>
+                    <li><a href="http://localhost/Route99/Files/Questions.php">Questions</a></li>
                 </ul>
             </nav>
         </header>

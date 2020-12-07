@@ -11,7 +11,7 @@
 
 
         if (emptyInputString($username, $password, $passwordRepeat, $email) !== false) {
-            header("location: ../Files/Register.php?error=empty");
+            header("location: ../Files/Register.php?error=emptyinputs");
             exit();
         }
         if (invalidUid($username) !== false) {

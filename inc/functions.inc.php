@@ -100,7 +100,6 @@ function createUser($conn, $username, $password, $email) {
     exit();
 }
 
-
 //Admin login
 function emptyInputLogin($username, $password){
     if (empty($username) || empty($password)){ 
@@ -135,5 +134,51 @@ function loginUser($conn, $username, $password){
         exit();
      }
 }
+
+//Question Creation
+    function emptyQuestionString($question, $answer1, $answer2) {
+    if (empty($question) || empty($answer1) || empty($answer2)){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+
+function createQuestion($conn, $question, $answer1, $answer2, $answer3, $answer4) {
+    $sql = "INSERT INTO `questions` (`question`, `answer1`, `answer2`, `answer3`, `answer4`)
+    VALUES (?, ?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("location: ../Files/Questions.php?error=failedcreation");
+        exit();
+    }
+    mysqli_stmt_bind_param($stmt, "sssss", $question, $answer1, $answer2, $answer3, $answer4);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../Files/Questions.php?error=none");
+    exit();
+}
+
+//Fetch questions from Database
+function FetchQuestions($conn, $question, $answer1, $answer2, $answer3, $answer4) {
+    
+    $sql = "SELECT * FROM `questions`";
+    $response = mysqli_query($conn, $sql);
+    
+    $data = array();
+
+    if($response) 
+    {
+        while ($row = mysqli_fetch_assoc($response)) 
+        {
+            $data[] = $row;
+        }
+    }
+}
+
+//CREATE FUNCTION TO UPDATE QUESTION DATA.
+
 
 

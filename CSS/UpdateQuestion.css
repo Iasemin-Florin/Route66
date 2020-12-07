@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+body {
+    background-color: rgb(255, 235, 205);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.exit-btn img{
+    height: 20px;
+    width: 20px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+}
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: blanchedalmond;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.hide-mobile {
+    display: none;
+}
+nav ul {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background: rgb(0, 0, 0);
+    height: 100%;
+    z-index: 7;
+    padding-top: 3em;
+}
+nav ul li a {
+    color: rgb(255, 235, 205);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+}
+.exit-btn {
+    margin-bottom: 1em;
+    margin-top: -1.3em;
+    text-align: right;
+    padding: 0 1.4em
+}
+.exit-btn img {
+    height: 20px;
+}
+.exit-btn img:hover {
+    cursor: pointer;
+}
+nav ul li a:hover {
+    background-color: rgb(47, 47, 47);
+}
+form {
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    background: rgb(255, 235, 205);
+    text-align: center;
+}
+form h1, label {
+    color: #564D40;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+form select {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #564D40;
+    width: 200px;
+    outline: none;
+    color: #564D40;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+form input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #564D40;
+    padding: 14px 40px;
+    outline: none;
+    color: #564D40;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+@media only screen and (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .show-desktop {
+        display: block;
+        margin: 0 auto 13% auto;  
+    }
+    .hide-desktop {
+        display: none;
+    }
+    nav ul {
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0;
+    }
+    nav ul li {
+        float: left;    
+    }
+    nav ul li a {
+        color: #564d40;
+        background-color: inherit;
+        text-align: left;
+        padding: 1em 2em;
+    }
+    nav ul li a:hover {
+        background: none;
+    }
+}
